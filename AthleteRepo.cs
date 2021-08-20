@@ -3,7 +3,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ We have a repository of athletes.
+ An athlete has a name, height in centimeters, and a profession.
 
+ Typically, there is a clear correlation between being tall and
+ playing basketball: If an Athlete is tall (i.e.: height >= 180)
+ then s/he is a basketball player, and if s/he is not tall then
+ s/he is not a basketball player. 
+ 
+ In the code below:
+ Bob is tall and plays basketball, and Alex is short and plays
+ soccer, so they are typical. 
+ Frank, shorty and Jane are rare.
+ 
+ We want to print the names of all the rare athletes.
+ 
+ Unfortunately we have a bug. Please fix it. 
+ Use the opportunity to improve the code quality, until you feel comfortable putting your name behind it.
+ 
+ *Do not change the behavior of the function "printAll". For example: When it gets a null value as input, it is expected to throw an NPE.
+*/
 public static class Solution
 {
     class Athlete {
@@ -28,8 +48,9 @@ public static class Solution
 
     };
     
+    // NOTE: No need to change any code above this line
     private static void Main() {
-        //Console.WriteLine(String.Join(", ", new AthleteRepo().printAll(ATHLETES)));
+        Console.WriteLine(String.Join(", ", new AthleteRepo().printAll(ATHLETES)));
     }
     
     class AthleteRepo {

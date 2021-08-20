@@ -44,7 +44,7 @@ class Main {
       new Athlete("Jane", 190, "chess"));
   
   
-  // NOTE: Do not change any code above this line
+  // NOTE: No need to change any code above this line
   
   public static void main(String[] args) {
     System.out.println(new AthleteRepo().printAll(ATHLETES));  // Frank, Shorty and Jane
