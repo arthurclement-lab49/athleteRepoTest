@@ -45,27 +45,22 @@ public static class Solution
         new Athlete("Frank", 130, "basketball"), 
         new Athlete("Shorty", 175, "basketball"), 
         new Athlete("Jane", 190, "chess")
-
     };
     
     // NOTE: No need to change any code above this line
     private static void Main() {
-        Console.WriteLine(String.Join(", ", new AthleteRepo().printAll(ATHLETES)));
+        Console.WriteLine(String.Join(", ", new AthleteRepo().printAll(ATHLETES))); // Frank, Shorty and Jane
     }
     
     class AthleteRepo {
-        public List < String > printAll(List<Athlete> all)
-		{
-			if (all == null)
-			{
+        public List < String > printAll(List<Athlete> all) {
+			if (all == null) {
 				throw new NullReferenceException();
 			}
-			else if (all.Count < 1)
-			{
+			else if (all.Count < 1) {
 				return new List < String > ();
 			}
-			else
-			{
+			else {
 				var allNames = new List < String > ();
 				foreach(Athlete f in all)
 				{
@@ -78,20 +73,11 @@ public static class Solution
 			}
 		}
 		// it is the norm for tall athletes to be basketball players
-		public static bool rare(Athlete a)
-		{
-			if ((a.height >= 180 && a.profession.Equals("basketball")) || (a.height < 180 && !a.profession.Equals("basketball")))
-			{
-				return false;
-			}
-			else if (a.height >= 180 || a.profession.Equals("basketball"))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+		public static bool rare(Athlete a) {
+            if (a.height > 180 || a.profession != "basketball")
+                return false;
+            else
+                return true;
 		}
     }
 }
