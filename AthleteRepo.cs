@@ -55,7 +55,7 @@ public static class Solution
     }
     
     class AthleteRepo {
-        public List < String > printAll(List<Athlete> all) {
+        public List <String> printAll(List<Athlete> all) {
 			if (all == null) {
 				throw new NullReferenceException();
 			}
