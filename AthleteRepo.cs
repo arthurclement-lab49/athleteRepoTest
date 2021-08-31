@@ -75,7 +75,7 @@ public static class Solution
 			}
 		}
 		// it is the norm for tall athletes to be basketball players
-		public static bool rare(Athlete a) {
+		public bool rare(Athlete a) {
             if (a.height > 180 || a.profession != "basketball")
                 return false;
             else
